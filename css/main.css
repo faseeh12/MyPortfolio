@@ -1,68 +1,130 @@
 @font-face {
-    font-family: 'robotoregular';
-    src: url('roboto-regular-webfont.woff2') format('woff2'),
-         url('roboto-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'robotoregular';
+  src: url("roboto-regular-webfont.woff2") format("woff2"), url("roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-
 @font-face {
-    font-family: 'abhaya_libreregular';
-    src: url('abhayalibre-regular-webfont.woff2') format('woff2'),
-         url('abhayalibre-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'abhaya_libreregular';
+  src: url("abhayalibre-regular-webfont.woff2") format("woff2"), url("abhayalibre-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*============
     colors variables
   ============
 */
-:root{
-    --main-bg-color: #0D0D0D;
-    --main-font-color: #ffffff;
-    --primary-grey: #F2F2F2;
-    --primary-light-green: #1FBF47;
-    --primary-dark-green: #1C8C38;
-    --primary-light-black: #2A2A2A;
-    --primary-dark-black: #0D0D0D;
+:root {
+  --main-bg-color: #0D0D0D;
+  --main-font-color: #ffffff;
+  --primary-grey: #F2F2F2;
+  --primary-light-green: #1FBF47;
+  --primary-dark-green: #1C8C38;
+  --primary-light-black: #2A2A2A;
+  --primary-dark-black: #0D0D0D;
 }
 
-
-html,body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--main-bg-color);
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-bg-color);
 }
 
-
-h1,h2,h3,h4,h5,h6,p,span,label,a{
-    font-family: 'robotoregular', sans-serif;
-    color: var(--main-font-color);
-    margin: 0;
+h1, h2, h3, h4, h5, h6, p, span, label, a {
+  font-family: 'robotoregular', sans-serif;
+  color: var(--main-font-color);
+  margin: 0;
 }
 
-
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-
-a:hover{
-    text-decoration: none;
+a:hover {
+  text-decoration: none;
 }
 
-
-ul{
-    padding: 0;
+ul {
+  padding: 0;
 }
 
-
-ul li{
-    list-style: none;
+ul li {
+  list-style: none;
 }
+
+main .header {
+  background: var(--main-bg-color);
+  width: 8%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 5px 3px 12px 0px #000000;
+          box-shadow: 5px 3px 12px 0px #000000;
+  z-index: 1;
+}
+
+main .header .logo h1 {
+  font-family: 'abhaya_libreregular';
+  color: var(--primary-dark-green);
+  font-size: 51px;
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+
+main .header .menubar {
+  width: 100%;
+  height: 26px;
+  position: relative;
+  top: 210px;
+  cursor: pointer;
+}
+
+main .header .menubar .before-border {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 40%;
+  height: 5px;
+  margin: 0 auto;
+  background: var(--main-font-color);
+  border-radius: 10px;
+}
+
+main .header .menubar .after-border {
+  position: absolute;
+  top: 19px;
+  left: 30px;
+  width: 40%;
+  height: 5px;
+  margin: 0 auto;
+  background: var(--main-font-color);
+  border-radius: 10px;
+}
+
+main .header .socialbar {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+}
+
+main .main {
+  width: 89%;
+  margin: 0 150px auto;
+  height: 100vh;
+}
+
+main .main .hero-header {
+  text-shadow: 0px 0 0 #1C8C38, 1px 0 0 #1C8C38, -1px 0 0 #1C8C38;
+  color: var(--main-bg-color);
+  font-size: 255px;
+  position: absolute;
+  top: 0px;
+  left: 6px;
+}
+/*# sourceMappingURL=main.css.map */
