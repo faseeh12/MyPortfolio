@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('roboto-regular-webfont.woff2') format('woff2'),
+         url('roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'abhaya_libreregular';
+    src: url('abhayalibre-regular-webfont.woff2') format('woff2'),
+         url('abhayalibre-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*============
+    colors variables
+  ============
+*/
+:root{
+    --main-bg-color: #0D0D0D;
+    --main-font-color: #ffffff;
+    --primary-grey: #F2F2F2;
+    --primary-light-green: #1FBF47;
+    --primary-dark-green: #1C8C38;
+    --primary-light-black: #2A2A2A;
+    --primary-dark-black: #0D0D0D;
+}
+
+
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+}
+
+
+h1,h2,h3,h4,h5,h6,p,span,label,a{
+    font-family: 'robotoregular', sans-serif;
+    color: var(--main-font-color);
+    margin: 0;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+a:hover{
+    text-decoration: none;
+}
+
+
+ul{
+    padding: 0;
+}
+
+
+ul li{
+    list-style: none;
+}
