@@ -81,7 +81,7 @@ main .header .menubar {
   width: 100%;
   height: 26px;
   position: relative;
-  top: 210px;
+  top: 30%;
   cursor: pointer;
 }
 
@@ -109,8 +109,73 @@ main .header .menubar .after-border {
 
 main .header .socialbar {
   position: absolute;
-  bottom: 80px;
-  left: 0;
+  bottom: 40px;
+  left: 4px;
+  text-align: center;
+  width: 85%;
+}
+
+main .header .socialbar .fb-btn {
+  padding: 22px 16px 12px;
+  border-radius: 60px;
+  -webkit-box-shadow: 3px 3px 6px 0px #000000, -2px -2px 6px -5px #ffffff;
+          box-shadow: 3px 3px 6px 0px #000000, -2px -2px 6px -5px #ffffff;
+  line-height: 2;
+}
+
+main .header .socialbar .fb-btn i {
+  font-size: 26px;
+  color: var(--main-font-color);
+}
+
+main .header .socialbar .fb-btn:hover {
+  -webkit-box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
+          box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
+}
+
+main .header .socialbar .behance-btn {
+  padding: 22px 11px 12px;
+  border-radius: 60px;
+  -webkit-box-shadow: 3px 3px 6px 0px #000000, -2px -2px 6px -5px #ffffff;
+          box-shadow: 3px 3px 6px 0px #000000, -2px -2px 6px -5px #ffffff;
+  line-height: 5.5;
+}
+
+main .header .socialbar .behance-btn i {
+  font-size: 26px;
+  color: var(--main-font-color);
+}
+
+main .header .socialbar .behance-btn:hover {
+  -webkit-box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
+          box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
+}
+
+main .header .socialbar .linkedin-btn {
+  padding: 22px 14px 12px;
+  border-radius: 60px;
+  -webkit-box-shadow: 3px 3px 6px 0px #000000, -2px -2px 6px -5px #ffffff;
+          box-shadow: 3px 3px 6px 0px #000000, -2px -2px 6px -5px #ffffff;
+}
+
+main .header .socialbar .linkedin-btn i {
+  font-size: 26px;
+  color: var(--main-font-color);
+}
+
+main .header .socialbar .linkedin-btn:hover {
+  -webkit-box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
+          box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
+}
+
+main .header .menu-bottom-border {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  background: var(--main-font-color);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 main .main {
@@ -119,12 +184,62 @@ main .main {
   height: 100vh;
 }
 
-main .main .hero-header {
+main .main div .hero-header {
   text-shadow: 0px 0 0 #1C8C38, 1px 0 0 #1C8C38, -1px 0 0 #1C8C38;
   color: var(--main-bg-color);
   font-size: 255px;
   position: absolute;
   top: 0px;
   left: 6px;
+}
+
+main .main .hero-main {
+  position: relative;
+  padding: 10% 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 80%;
+}
+
+main .main .hero-main .hero-left-section {
+  width: 48%;
+  margin: 0 0 10px 0;
+}
+
+main .main .hero-main .hero-left-section h1 {
+  font-size: 4rem;
+}
+
+main .main .hero-main .hero-left-section p {
+  font-size: 0.875rem;
+  line-height: 2;
+  margin-top: 39px;
+}
+
+main .main .hero-main .hero-right-section {
+  width: 50%;
+}
+
+main .main .hero-bottom-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0em;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'abhaya_libreregular';
+  font-size: 1.5rem;
+  text-shadow: 1px 0px 0px var(--main-font-color), 1px 0px 0px var(--main-font-color), 0px 0px 0px var(--main-font-color);
+}
+
+main .main .hero-bottom-section .right-tag {
+  margin: 0 50px 0px 0px;
 }
 /*# sourceMappingURL=main.css.map */

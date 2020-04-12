@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/footer.scss">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/e74ee50f7e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
     <main>
@@ -25,21 +26,55 @@
 
 
             <div class="socialbar">
-                <div class="fb-btn">
+                <a href="#" class="fb-btn">
                     <i class="fab fa-facebook-f"></i>
-                </div>
-                <div class="behance-btn">
+                </a>
+                <a href="#" class="behance-btn">
                     <i class="fab fa-behance"></i>
-                </div>
-                <div class="linkedin-btn">
+                </a>
+                <a href="#" class="linkedin-btn">
                     <i class="fab fa-linkedin-in"></i>
-                </div>
+                </a>
             </div>
+
+            <div class="menu-bottom-border"></div>
         </div>
 
 
         <div class="main">
-            <h1 class="hero-header">ABOUT ME</h1>
+            <div>
+                <h1 class="hero-header">ABOUT ME</h1>
+            </div>
+            <!--HERO SECTION-->
+            <div class="hero-main">
+                <div class="hero-left-section">
+                    <h1>Welcome</h1>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
+                </div>
+                
+                <div class="hero-right-section">
+                    <div class="multiple-items">
+                        <div>
+                            <img src="images/about section.png" alt="">
+                        </div>
+                        <div>
+                            <img src="images/portfolio section-3.png" alt="">
+                        </div>
+                        <div>
+                            <img src="images/about section.png" alt="">
+                        </div>
+                        <div>
+                            <img src="images/portfolio section-3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-bottom-section">
+                    <div class="left-tag">#Web Designer</div>
+                    <div class="right-tag">#UI UX Designer</div>
+                </div>
+            </div>
         </div>
 
 
@@ -47,6 +82,18 @@
 
         </div>
     </main>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+       $('.multiple-items').slick({
+           arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll:1
+    });
+            
+    </script>
 </body>
 </html>

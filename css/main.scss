@@ -87,11 +87,13 @@ main{
                 margin: 40px 0 0 0;
             }
         }
+
+
         .menubar{
             width: 100%;
             height: 26px;
             position: relative;
-            top: 210px;
+            top: 30%;
             cursor: pointer;
             .before-border{
                 position: absolute;
@@ -114,26 +116,125 @@ main{
                 border-radius: 10px;
             }
         }
+
+
         .socialbar {
             position: absolute;
-            bottom: 80px;
-            left: 0;
+            bottom: 40px;
+            left: 4px;
+            text-align: center;
+            width: 85%;
+            .fb-btn {
+                padding: 22px 16px 12px;
+                border-radius: 60px;
+                box-shadow: 3px 3px 6px 0px #000000, -2px -2px 6px -5px #ffffff;
+                line-height: 2;
+                i{
+                    font-size: 26px;
+                    color: var(--main-font-color);
+                }
+            }
+            .fb-btn:hover{
+                box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
+            }
+            .behance-btn {
+                padding: 22px 11px 12px;
+                border-radius: 60px;
+                box-shadow: 3px 3px 6px 0px #000000, -2px -2px 6px -5px #ffffff;
+                line-height: 5.5;
+                i{
+                    font-size: 26px;
+                    color: var(--main-font-color);
+                }
+            }
+            .behance-btn:hover{
+                box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
+            }
+            .linkedin-btn {
+                padding: 22px 14px 12px;
+                border-radius: 60px;
+                box-shadow: 3px 3px 6px 0px #000000, -2px -2px 6px -5px #ffffff;
+                i{
+                    font-size: 26px;
+                    color: var(--main-font-color);
+                }
+            }
+            .linkedin-btn:hover{
+                box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
+            }
+        }
+
+
+        .menu-bottom-border{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 8px;
+            background: var(--main-font-color);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
     }
-
 
 
     .main{
         width: 89%;
         margin: 0 150px auto;
         height: 100vh;
-        .hero-header{
-            text-shadow: 0px 0 0 #1C8C38, 1px 0 0 #1C8C38, -1px 0 0 #1C8C38;
-            color: var(--main-bg-color);
-            font-size: 255px;
+        div{
+            .hero-header{
+                text-shadow: 0px 0 0 #1C8C38, 1px 0 0 #1C8C38, -1px 0 0 #1C8C38;
+                color: var(--main-bg-color);
+                font-size: 255px;
+                position: absolute;
+                top: 0px;
+                left: 6px;
+            }
+        }
+        
+        
+        .hero-main {
+            position: relative;
+            padding: 10% 0 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            height: 80%;
+            .hero-left-section{
+                width: 48%;
+                margin: 0 0 10px 0;
+                h1{
+                    font-size: 4rem;
+                }
+                p{
+                    font-size: 0.875rem;
+                    line-height: 2;
+                    margin-top: 39px;
+                }
+            }
+            .hero-right-section{
+                width: 50%;
+                .multiple-items{
+                }
+            }
+        }
+
+
+        .hero-bottom-section{
+            display: flex;
             position: absolute;
-            top: 0px;
-            left: 6px;
+            bottom: 0;
+            left: 0em;
+            width: 100%;
+            justify-content: space-between;
+            font-family: 'abhaya_libreregular';
+            font-size: 1.5rem;
+            text-shadow: 1px 0px 0px var(--main-font-color), 1px 0px 0px var(--main-font-color), 0px 0px 0px var(--main-font-color);
+            .left-tag{
+            }
+
+            .right-tag{
+                margin: 0 50px 0px 0px;
+            }
         }
     }
 
