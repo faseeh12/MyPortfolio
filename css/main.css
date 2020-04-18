@@ -33,6 +33,7 @@ html, body {
   width: 100%;
   height: 100%;
   background-color: var(--main-bg-color);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p, span, label, a {
@@ -55,6 +56,13 @@ ul {
 
 ul li {
   list-style: none;
+}
+
+main {
+  /*===========
+            SKILL SECTION
+           ==========
+        */
 }
 
 main .header {
@@ -182,12 +190,24 @@ main .main {
   width: 89%;
   margin: 0 150px auto;
   height: 100vh;
+  /*===========
+            HERO SECTION
+            ==========
+        */
+  /*===========
+            THIS SECTION WILL FLOAT
+            ==========
+        */
+  /*===========
+            PRODUCT SECTION
+            ==========
+        */
 }
 
-main .main div .hero-header {
+main .main .hero-header {
   text-shadow: 0px 0 0 #1C8C38, 1px 0 0 #1C8C38, -1px 0 0 #1C8C38;
   color: var(--main-bg-color);
-  font-size: 255px;
+  font-size: 250px;
   position: absolute;
   top: 0px;
   left: 6px;
@@ -227,10 +247,10 @@ main .main .hero-bottom-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  left: 0em;
-  width: 100%;
+  left: 6em;
+  width: 90%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -241,5 +261,128 @@ main .main .hero-bottom-section {
 
 main .main .hero-bottom-section .right-tag {
   margin: 0 50px 0px 0px;
+}
+
+main .main .product-main {
+  position: relative;
+  padding: 10% 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 80%;
+}
+
+main .main .product-main .work-box {
+  position: relative;
+  left: 26em;
+}
+
+main .main .product-main .portfolio-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  width: 100%;
+}
+
+main .main .product-main .portfolio-box .p-left-sec {
+  float: left;
+}
+
+main .main .product-main .portfolio-box .p-left-sec .portfolio-1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+main .main .product-main .portfolio-box .p-left-sec .portfolio-1 img {
+  width: 100%;
+}
+
+main .main .product-main .portfolio-box .p-right-sec {
+  float: right;
+}
+
+main .main .product-main .portfolio-box .p-right-sec .portfolio-2 {
+  position: absolute;
+  right: 0;
+  top: 20em;
+}
+
+main .main .product-main .portfolio-box .p-right-sec .portfolio-2 img {
+  width: 100%;
+}
+
+main .main .product-main .portfolio-box .sec-portfolio {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 67em 0;
+  width: 100%;
+}
+
+main .main .product-main .portfolio-box .sec-portfolio .prt-1 {
+  position: absolute;
+}
+
+main .main .product-main .portfolio-box .sec-portfolio .prt-2 {
+  position: absolute;
+  left: 80px;
+  top: 350px;
+}
+
+main .main .product-main .portfolio-box .sec-portfolio .prt-3 {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+}
+
+main .main .product-main .portfolio-box .protfolio-end-box {
+  position: absolute;
+  bottom: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+main .main .product-main .portfolio-box .protfolio-end-box a {
+  font-family: 'abhaya_libreregular';
+  color: var(--primary-dark-green);
+  font-size: 1.625rem;
+}
+
+main .skill-main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 185em;
+}
+
+main .skill-main .skill-box {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .skill-main .skill-box .skill-set {
+  width: 33.333333%;
+  height: 100%;
+  background: red;
 }
 /*# sourceMappingURL=main.css.map */

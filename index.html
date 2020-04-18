@@ -42,9 +42,7 @@
 
 
         <div class="main">
-            <div>
-                <h1 class="hero-header">ABOUT ME</h1>
-            </div>
+            <h1 class="hero-header">ABOUT ME</h1>
             <!--HERO SECTION-->
             <div class="hero-main">
                 <div class="hero-left-section">
@@ -75,8 +73,63 @@
                     <div class="right-tag">#UI UX Designer</div>
                 </div>
             </div>
-        </div>
 
+            <!--PRODUCT SECTION-->
+            <div class="product-main">
+                <div class="work-box">
+                    <h1 class="hero-header">WORK</h1>
+                </div>
+                
+                <div class="portfolio-box">
+                    <div class="p-left-sec">
+                        <div class="portfolio-1">
+                            <img src="images/portfolio section-big.png" alt="">
+                        </div>
+                    </div>
+                    <div class="p-right-sec">
+                        <div class="portfolio-2">
+                            <img src="images/portfolio section-2-big.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="sec-portfolio">
+                        <div class="prt-1">
+                            <img src="images/about section.PNG" alt=""> 
+                        </div>
+                        <div class="prt-2">
+                            <img src="images/portfolio section-2.PNG" alt="">
+                        </div>
+                        <div class="prt-3">
+                            <img src="images/portfolio section.PNG" alt="">
+                        </div>
+                    </div>
+
+                    <div class="protfolio-end-box">
+                        <a href="#">Click here to see my full portoflio</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!--SKILL SECTION-->
+        <div class="skill-main">
+            <div class="skill-box">
+                <div class="skill-set">
+                    <h1>HTML</h1>
+                </div>
+                <div class="skill-set">
+                    <h1>CSS</h1>
+                </div>
+                <div class="skill-set">
+                    <h1>JSCRIPT</h1>
+                </div>
+                <div class="skill-set">
+                    <h1>SCSS</h1>
+                </div>
+                <div class="skill-set">
+                    <h1>JQUERY</h1>
+                </div>
+            </div>
+        </div>
 
         <div class="footer">
 
@@ -88,12 +141,17 @@
     <script src="js/script.js"></script>
     <script>
        $('.multiple-items').slick({
-           arrows: false,
+            arrows: false,
             infinite: true,
             slidesToShow: 1,
             slidesToScroll:1
-    });
-            
+        });
+        $('.skill-box').slick({
+            arrows: false,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
     </script>
 </body>
 </html>
