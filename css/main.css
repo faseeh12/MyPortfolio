@@ -1,3 +1,7 @@
+/*============
+    colors variables
+  ============
+*/
 @font-face {
   font-family: 'robotoregular';
   src: url("roboto-regular-webfont.woff2") format("woff2"), url("roboto-regular-webfont.woff") format("woff");
@@ -12,33 +16,19 @@
   font-style: normal;
 }
 
-/*============
-    colors variables
-  ============
-*/
-:root {
-  --main-bg-color: #0D0D0D;
-  --main-font-color: #ffffff;
-  --primary-grey: #F2F2F2;
-  --primary-light-green: #1FBF47;
-  --primary-dark-green: #1C8C38;
-  --primary-light-black: #2A2A2A;
-  --primary-dark-black: #0D0D0D;
-}
-
 html, body {
   position: relative;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--main-bg-color);
+  background-color: #0D0D0D;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p, span, label, a {
   font-family: 'robotoregular', sans-serif;
-  color: var(--main-font-color);
+  color: #ffffff;
   margin: 0;
 }
 
@@ -58,28 +48,52 @@ ul li {
   list-style: none;
 }
 
+#pointer-ring {
+  z-index: 3 !important;
+}
+
+#pointer-dot {
+  z-index: 3 !important;
+}
+
 main {
   /*===========
-            SKILL SECTION
-           ==========
-        */
+        HEADER SECTION
+        ==========
+    */
+  /*===========
+        MAIN SECTION
+        ==========
+    */
+  /*===========
+        SKILL SECTION
+        ==========
+    */
+  /*===========
+        FOOTER SECTION
+        ==========
+    */
 }
 
 main .header {
-  background: var(--main-bg-color);
+  background: #0D0D0D;
   width: 8%;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-box-shadow: 5px 3px 12px 0px #000000;
-          box-shadow: 5px 3px 12px 0px #000000;
   z-index: 1;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+main .header:focus {
+  width: 100%;
 }
 
 main .header .logo h1 {
   font-family: 'abhaya_libreregular';
-  color: var(--primary-dark-green);
+  color: #1C8C38;
   font-size: 51px;
   text-align: center;
   margin: 40px 0 0 0;
@@ -100,7 +114,7 @@ main .header .menubar .before-border {
   width: 40%;
   height: 5px;
   margin: 0 auto;
-  background: var(--main-font-color);
+  background: #ffffff;
   border-radius: 10px;
 }
 
@@ -111,7 +125,7 @@ main .header .menubar .after-border {
   width: 40%;
   height: 5px;
   margin: 0 auto;
-  background: var(--main-font-color);
+  background: #ffffff;
   border-radius: 10px;
 }
 
@@ -133,10 +147,10 @@ main .header .socialbar .fb-btn {
 
 main .header .socialbar .fb-btn i {
   font-size: 26px;
-  color: var(--main-font-color);
+  color: #ffffff;
 }
 
-main .header .socialbar .fb-btn:hover {
+main .header .socialbar .fb-btn:active {
   -webkit-box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
           box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
 }
@@ -151,10 +165,10 @@ main .header .socialbar .behance-btn {
 
 main .header .socialbar .behance-btn i {
   font-size: 26px;
-  color: var(--main-font-color);
+  color: #ffffff;
 }
 
-main .header .socialbar .behance-btn:hover {
+main .header .socialbar .behance-btn:active {
   -webkit-box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
           box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
 }
@@ -168,10 +182,10 @@ main .header .socialbar .linkedin-btn {
 
 main .header .socialbar .linkedin-btn i {
   font-size: 26px;
-  color: var(--main-font-color);
+  color: #ffffff;
 }
 
-main .header .socialbar .linkedin-btn:hover {
+main .header .socialbar .linkedin-btn:active {
   -webkit-box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
           box-shadow: 3px 3px 6px -5px #fff, -2px -2px 6px -2px #000;
 }
@@ -181,9 +195,83 @@ main .header .menu-bottom-border {
   bottom: 0;
   width: 100%;
   height: 8px;
-  background: var(--main-font-color);
+  background: #ffffff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+main .header-expand {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #0D0D0D;
+  z-index: 1;
+  -webkit-animation: 1s slideOut, 1s slideIn;
+          animation: 1s slideOut, 1s slideIn;
+}
+
+main .header-expand .menu-bg-head h1 {
+  position: absolute;
+  top: 20%;
+  left: 255px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-size: 250px;
+  color: #2A2A2A;
+  font-weight: 100;
+}
+
+main .header-expand .menu-content {
+  width: 89%;
+  margin: 0 150px auto;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .header-expand .menu-content div ul {
+  margin: 127px;
+}
+
+main .header-expand .menu-content div ul li {
+  padding: 0px 0 21px 0;
+}
+
+main .header-expand .menu-content div ul li a {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+main .header-expand .menu-content div ul li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  padding-top: 20px;
+  border-bottom: 1px solid #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+main .header-expand .menu-content div ul li a:hover::after {
+  width: 100%;
+}
+
+main .header-expand .menu-content div.my-img {
+  position: relative;
+}
+
+main .header-expand .menu-content div.my-img img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-90%, -50%);
+          transform: translate(-90%, -50%);
 }
 
 main .main {
@@ -206,7 +294,7 @@ main .main {
 
 main .main .hero-header {
   text-shadow: 0px 0 0 #1C8C38, 1px 0 0 #1C8C38, -1px 0 0 #1C8C38;
-  color: var(--main-bg-color);
+  color: #0D0D0D;
   font-size: 250px;
   position: absolute;
   top: 0px;
@@ -247,16 +335,17 @@ main .main .hero-bottom-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  left: 6em;
+  left: 0em;
   width: 90%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-family: 'abhaya_libreregular';
   font-size: 1.5rem;
-  text-shadow: 1px 0px 0px var(--main-font-color), 1px 0px 0px var(--main-font-color), 0px 0px 0px var(--main-font-color);
+  text-shadow: 1px 0px 0px #ffffff, 1px 0px 0px #ffffff, 0px 0px 0px #ffffff;
+  z-index: 1;
 }
 
 main .main .hero-bottom-section .right-tag {
@@ -305,6 +394,12 @@ main .main .product-main .portfolio-box .p-left-sec .portfolio-1 {
 
 main .main .product-main .portfolio-box .p-left-sec .portfolio-1 img {
   width: 100%;
+}
+
+main .main .product-main .portfolio-box .p-left-sec .portfolio-1 img:hover {
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: url("./../images/Menu_Icon.png"), auto;
 }
 
 main .main .product-main .portfolio-box .p-right-sec {
@@ -357,8 +452,9 @@ main .main .product-main .portfolio-box .protfolio-end-box {
 
 main .main .product-main .portfolio-box .protfolio-end-box a {
   font-family: 'abhaya_libreregular';
-  color: var(--primary-dark-green);
+  color: #1C8C38;
   font-size: 1.625rem;
+  letter-spacing: 2px;
 }
 
 main .skill-main {
@@ -366,6 +462,7 @@ main .skill-main {
   width: 100%;
   height: 100%;
   top: 185em;
+  z-index: 1;
 }
 
 main .skill-main .skill-box {
@@ -380,9 +477,275 @@ main .skill-main .skill-box {
           align-items: center;
 }
 
-main .skill-main .skill-box .skill-set {
+main .skill-main .skill-box .skill-set:nth-child(4) {
   width: 33.333333%;
+  height: 100vh;
+  position: relative;
+  background: #0D0D0D;
+  outline: none;
+  cursor: pointer;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(4) .skillbg-heading {
+  text-shadow: 0px 0 0 #1C8C38, 1px 0 0 #1C8C38, -1px 0 0 #1C8C38;
+  color: #0D0D0D;
+  font-size: 250px;
+  position: absolute;
+  top: 270px;
+  right: -100px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  text-align: left;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(4) .skill-overlay {
+  display: none;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(4):focus .skill-overlay {
+  display: block;
+  background: #000000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  background: red;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(5) {
+  width: 33.333333%;
+  height: 100vh;
+  position: relative;
+  background: #2A2A2A;
+  outline: none;
+  cursor: pointer;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(5) .skillbg-heading {
+  text-shadow: 0px 0 0 #1C8C38, 1px 0 0 #1C8C38, -1px 0 0 #1C8C38;
+  color: #2A2A2A;
+  font-size: 250px;
+  position: absolute;
+  top: 180px;
+  right: 0px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  text-align: left;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(5) .skill-overlay {
+  display: none;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(5):focus .skill-overlay {
+  display: block;
+  background: #000000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(6) {
+  width: 33.333333%;
+  height: 100vh;
+  position: relative;
+  background: #1C8C38;
+  outline: none;
+  cursor: pointer;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(6) .skillbg-heading {
+  text-shadow: 0px 0 0 #0D0D0D, 1px 0 0 #0D0D0D, -1px 0 0 #0D0D0D;
+  color: #1C8C38;
+  font-size: 250px;
+  position: absolute;
+  top: 395px;
+  right: -200px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  text-align: left;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(6) .skill-overlay {
+  display: none;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(6):focus .skill-overlay {
+  display: block;
+  background: #000000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(7) {
+  width: 33.333333%;
+  height: 100vh;
+  position: relative;
+  background: #1FBF47;
+  outline: none;
+  cursor: pointer;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(7) .skillbg-heading {
+  text-shadow: 0px 0 0 #0D0D0D, 1px 0 0 #0D0D0D, -1px 0 0 #0D0D0D;
+  color: #1FBF47;
+  font-size: 250px;
+  position: absolute;
+  top: 375px;
+  right: -200px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  text-align: left;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(7) .skill-overlay {
+  display: none;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(7):focus .skill-overlay {
+  display: block;
+  background: #000000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(8) {
+  width: 33.333333%;
+  height: 100vh;
+  position: relative;
+  background: #F2F2F2;
+  outline: none;
+  cursor: pointer;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(8) .skillbg-heading {
+  text-shadow: 0px 0 0 #0D0D0D, 1px 0 0 #0D0D0D, -1px 0 0 #0D0D0D;
+  color: #F2F2F2;
+  font-size: 250px;
+  position: absolute;
+  top: 200px;
+  right: -50px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  text-align: left;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(8) .skill-overlay {
+  display: none;
+}
+
+main .skill-main .skill-box .skill-set:nth-child(8):focus .skill-overlay {
+  display: block;
+  background: #000000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+main .footer {
+  position: absolute;
+  top: 227em;
+  width: 100%;
+  height: 100%;
+}
+
+main .footer .footer-bg-heading {
+  position: relative;
+}
+
+main .footer .footer-bg-heading .footer-heading:nth-child(1) {
+  text-shadow: 0px 0 0 #1C8C38, 1px 0 0 #1C8C38, -1px 0 0 #1C8C38;
+  color: #0D0D0D;
+  font-size: 170px;
+  position: absolute;
+  top: -60px;
+  left: 116px;
+}
+
+main .footer .footer-bg-heading .footer-heading:nth-child(2) {
+  text-shadow: 0px 0 0 #1C8C38, 1px 0 0 #1C8C38, -1px 0 0 #1C8C38;
+  color: #0D0D0D;
+  font-size: 140px;
+  position: absolute;
+  top: 170px;
+  left: 126px;
+}
+
+main .footer .bottom-area {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 31em 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .footer .bottom-area .footer-left h1 {
+  font-weight: 100;
+  font-size: 40px;
+  margin-bottom: 23px;
+}
+
+main .footer .bottom-area .footer-left a {
+  font-family: 'abhaya_libreregular';
+  color: #1C8C38;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+main .footer .bottom-area .footer-right {
+  width: 34%;
+}
+
+main .footer .bottom-area .footer-right h1 {
+  font-weight: 100;
+  font-size: 40px;
+}
+
+main .footer .bottom-area .footer-right span {
+  font-family: 'abhaya_libreregular';
+  font-size: 1.5rem;
+  text-shadow: 1px -1px 0px #ffffff, 1px 0px 0px #797979, 0px 0px 0px #0D0D0D;
+  padding: 0 9px;
+  color: #0D0D0D;
+  line-height: 2;
+}
+
+main .footer .copyright {
+  width: 80%;
+  margin: 0 auto;
+}
+
+main .footer .copyright p {
+  font-weight: 700;
 }
 /*# sourceMappingURL=main.css.map */

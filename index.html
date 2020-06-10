@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="css/main.scss">
     <link rel="stylesheet" href="css/footer.scss">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pointer.css">
     <script src="https://kit.fontawesome.com/e74ee50f7e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
     <main>
+        <!--HEADER SECTION-->
         <div class="header">
             <div class="logo">
                 <h1>F.</h1>
             </div>
             
-
             <div class="menubar">
                 <div class="before-border"></div>
                 <div class="after-border"></div>
             </div>
-
 
             <div class="socialbar">
                 <a href="#" class="fb-btn">
@@ -39,8 +39,28 @@
 
             <div class="menu-bottom-border"></div>
         </div>
-
-
+        
+        <!--HEADER EXPAND-->
+        <div class="header-expand">
+             <div class="menu-bg-head">
+                <h1>MENU</h1>
+            </div>
+            <div class="menu-content">
+                <div>
+                    <ul>
+                        <li><a href="">Intro</a></li>
+                        <li><a href="">Work</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="my-img">
+                    <img src="images/about section.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <!--MAIN SECTION-->
         <div class="main">
             <h1 class="hero-header">ABOUT ME</h1>
             <!--HERO SECTION-->
@@ -81,8 +101,8 @@
                 </div>
                 
                 <div class="portfolio-box">
-                    <div class="p-left-sec">
-                        <div class="portfolio-1">
+                    <div class="p-left-sec" data-aos="fade-up">
+                        <div class="portfolio-1" >
                             <img src="images/portfolio section-big.png" alt="">
                         </div>
                     </div>
@@ -110,36 +130,69 @@
                 </div>
             </div>
         </div>
+        
         <!--SKILL SECTION-->
         <div class="skill-main">
             <div class="skill-box">
                 <div class="skill-set">
-                    <h1>HTML</h1>
+                    <h1 class="skillbg-heading">HTML5</h1>
+                    <div class="skill-overlay"></div>
                 </div>
                 <div class="skill-set">
-                    <h1>CSS</h1>
+                    <h1 class="skillbg-heading">CSS3</h1>
+                    <div class="skill-overlay"></div>
                 </div>
                 <div class="skill-set">
-                    <h1>JSCRIPT</h1>
+                    <h1 class="skillbg-heading">JSCRIPT</h1>
+                    <div class="skill-overlay"></div>
                 </div>
                 <div class="skill-set">
-                    <h1>SCSS</h1>
+                    <h1 class="skillbg-heading">JQEURY</h1>
+                    <div class="skill-overlay"></div>
                 </div>
                 <div class="skill-set">
-                    <h1>JQUERY</h1>
+                    <h1 class="skillbg-heading">SCSS</h1>
+                    <div class="skill-overlay"></div>
                 </div>
             </div>
         </div>
-
+        
+        <!--FOOTER SECTION-->
         <div class="footer">
-
+            <div class="footer-bg-heading">
+                <h1 class="footer-heading">PHEW....</h1>
+                <h1 class="footer-heading">THAT WAS LONG</h1>
+            </div>
+            <div class="bottom-area">
+                <div class="footer-left">
+                    <h1>NEED PROJECT</h1>
+                    <a href="#">CLICK HERE TO START CONVERSTAION</a>
+                </div>
+                <div class="footer-right">
+                    <h1>FASEEH YASIN</h1>
+                    <span>#Front end designer</span>
+                    <span>#UI designer</span>
+                    <span>#Web designer</span>
+                    <span>#UX designer</span>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2020 Contemple. All Rights Reserved</p>
+            </div>
         </div>
     </main>
+    <script src="js/pointer.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
     <script>
+        init_pointer({
+            pointerColor: "#1FBF47",
+            ringSize: 15,
+            ringClickSize: 10
+        })
+
        $('.multiple-items').slick({
             arrows: false,
             infinite: true,
@@ -150,8 +203,24 @@
             arrows: false,
             infinite: true,
             slidesToShow: 3,
-            slidesToScroll: 3
+            slidesToScroll: 1
         });
+        // $('.menubar').click(function(){
+        //     if($('.header-expand').css('display') == 'none')
+        //     {
+        //         $('.header').css('z-index','2');
+        //         $('.header').css('box-shadow','0px 0px');
+        //         $('.header-expand').css('display','block');
+        //         $('.header-expand').css('z-index','1');
+        //     }
+        //     else{
+        //         $('.header').css('z-index','1');
+        //         $('.header').css('box-shadow','5px 3px 12px 0px #000000');
+        //         $('.header-expand').css('display','none');
+        //         $('.header-expand').css('z-index','0');
+        //     }
+        // })
+        AOS.init();
     </script>
 </body>
 </html>
